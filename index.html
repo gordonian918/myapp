@@ -1,0 +1,70 @@
+<style>
+.top {font-size: 50px; color: blue; background-color: aqua;}
+.botom {border: 5px solid green;}
+
+
+.button-42 {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+.button-42:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+
+.colapsed {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1.2s;
+}
+
+.expanded {
+	max-height: 480px;
+}
+</style>
+
+<div id="head" class="top">Goddy App</div>
+
+<div id="tape" class="botom colapsed">welcome to saving list</div>
+
+<button id="shape" class="button-42" >ligi bigi</button>
+
+<script>
+document.getElementById("head").addEventListener('click', 
+function()
+{
+    document.getElementById("tape").style.backgroundColor = "red";
+    document.getElementById("tape").style.height = "200px";
+});
+
+
+document.getElementById("shape").addEventListener('click', function()
+{
+    document.getElementById("tape").classList.toggle('expanded');
+});
+
+</script>
